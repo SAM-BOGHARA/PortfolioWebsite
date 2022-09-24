@@ -49,7 +49,7 @@ function Skills() {
                     <div className="text-xs">
                         <span color="text-label-2 dark:text-dark-label-2"></span>
                         <div
-                            className="inline-flex  bg-neutral-600 items-center px-2 mr-3 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 mt-2 bg-fill-3 dark:bg-dark-fill-3">
+                            className="inline-flex  bg-neutral-600 items-center px-2 mr-3 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3  bg-fill-3 dark:bg-dark-fill-3">
                             SQL
                         </div>
                     </div>
