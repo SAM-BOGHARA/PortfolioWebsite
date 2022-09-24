@@ -71,6 +71,13 @@ function Skills() {
                     <div className="text-xs">
                         <span color="text-label-2 dark:text-dark-label-2"></span>
                         <div
+                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
+                            RestAPI
+                        </div>
+                    </div>
+                    <div className="text-xs">
+                        <span color="text-label-2 dark:text-dark-label-2"></span>
+                        <div
                             className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
                             Flask
                         </div>
