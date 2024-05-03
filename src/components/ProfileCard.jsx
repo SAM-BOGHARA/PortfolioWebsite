@@ -1,12 +1,12 @@
-import React from "react";
-import profile from "../images/profile.jpg"
+import React, {Suspense} from "react";
+import profile from "../images/shubham-pic.jpeg"
 function ProfileCard() {
     return (
-        <div className="flex space-x-4 ">
-            <div class="rounded-xl overflow-hidden  w-full my-3 ">
-                <img src="https://wallpapercave.com/dwp1x/wp11301620.jpg" class="w-full" alt="" />
-                <div class="flex justify-center -mt-8">
-                    <img src={profile} alt="" class="rounded-full border-solid border-white border-2  md:-mt-1 md:w-20 h-20  sm:w-25 sm:h-25 shrink-0 "></img>
+        <Suspense>
+        <div className="flex space-x-4 mt-0">
+            <div className ="rounded-xl overflow-hidden  w-full my-1 mt-0 ">
+                <div className ="flex justify-center mt-2">
+                    <img src={profile} alt="" className ="rounded border-white border-2 md:-mt-1 md:w-22 h-22  sm:w-25 sm:h-25 shrink-0 "></img>
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="flex items-center">
@@ -22,6 +22,7 @@ function ProfileCard() {
                 </div>
             </div>
         </div>
+        </Suspense>
     )
 }
 

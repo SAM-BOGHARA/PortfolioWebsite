@@ -3,10 +3,10 @@ const courses = [
         "course": "Data Structures and Algorithms"
     },
     {
-        "course": "Python - 100 Days Of Code"
+        "course": "Udemy : Python - 100 Days Of Code Bootcamp"
     },
     {
-        "course": "Web Development"
+        "course": "Udemy : Web Development Bootcamp"
     },
     {
         "course": "Database Management Systems"

@@ -1,143 +1,82 @@
 import React from "react";
-// import skills from "../skills";
-// import SkillType from "../SkillType";
 
-// function createSkillType(skill) {
-//     return <SkillType {...skill} />
-// }
+function SkillCategory({ category, skills }) {
+  return (
+    <div className="mt-4  flex flex-col space-y-4">
+      <div>
+        <div className="flex -mb-2 items-center text-xs">
+          <span className="mr-1.5 flex">
+            <span
+              className={`inline-block h-1 w-1 rounded-full ${category.color}`}
+            ></span>
+          </span>
+          <span className="font-medium">{category.name}</span>
+        </div>
+      </div>
 
+      <div className="flex items-center text-xs text-label-1 dark:text-dark-label-1 flex-wrap ">
+        {skills.map((skill, index) => (
+          <div key={index} className="text-xs mt-1">
+            <span color="text-label-2 dark:text-dark-label-2"></span>
+            <div
+              className={`inline-flex bg-neutral-600 mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 ${category.bgColor}`}
+            >
+              {skill}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Skills() {
-    return (
-        <div>
-            <div className="text-lg font-semibold leading-6">
-                Skills
-            </div>
-            <div className="mt-4 flex flex-col space-y-4">
-                <div>
-                    <div class="flex items-center text-xs"><span class="mr-1.5 flex"><span class="inline-block h-1 w-1 rounded-full bg-yellow-300 dark:bg-dark-red-s"></span></span><span class="font-medium">Languages</span></div>
-                </div>
-                <div className="flex items-center text-xs text-label-1 dark:text-dark-label-1 flex-wrap ">
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            Python
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            JavaScript
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            NodeJS
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            Java
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex  bg-neutral-600 items-center px-2 mr-3 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3  bg-fill-3 dark:bg-dark-fill-3">
-                            SQL
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="mt-4 flex flex-col space-y-4">
-                <div>
-                    <div class="flex items-center text-xs"><span class="mr-1.5 flex"><span class="inline-block h-1 w-1 rounded-full bg-red-500 dark:bg-dark-red-s"></span></span><span class="font-medium">Frameworks</span></div>
-                </div>
+  const skillCategories = [
+    {
+      name: "Languages",
+      color: "bg-yellow-300 dark:bg-dark-red-s",
+      bgColor: "bg-fill-3 dark:bg-dark-fill-3",
+      skills: ["Python", "JavaScript", "Node.js", "Java", "SQL"],
+    },
+    {
+      name: "Frameworks",
+      color: "bg-red-500 dark:bg-dark-red-s",
+      bgColor: "bg-fill-3 dark:bg-dark-fill-3",
+      skills: ["Django", "SpringBoot", "Express.js"],
+    },
+    {
+      name: "Frontend",
+      color: "bg-blue-400 dark:bg-dark-red-s",
+      bgColor: "bg-fill-3 dark:bg-dark-fill-3",
+      skills: ["React", "Vite", "Next.js"],
+    },
+    {
+      name: "Databases",
+      color: "bg-green-400 dark:bg-dark-red-s",
+      bgColor: "bg-fill-3 dark:bg-dark-fill-3",
+      skills: ["MySQL", "MongoDB", "Redis", "PostgreSQL", "Firebase"],
+    },
 
-                <div className="flex items-center text-xs text-label-1 dark:text-dark-label-1 flex-wrap ">
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            ExpressJS
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            RestAPI
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            Flask
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div className="mt-4 flex flex-col space-y-4">
-                <div>
-                    <div class="flex items-center text-xs"><span class="mr-1.5 flex"><span class="inline-block h-1 w-1 rounded-full bg-blue-400 dark:bg-dark-red-s"></span></span><span class="font-medium">Frontend</span></div>
-                </div>
+    {
+      name: "Tools",
+      color: "bg-pink-400 dark:bg-dark-red-s",
+      bgColor: "bg-fill-3 dark:bg-dark-fill-3",
+      skills: ["Kafka", "Docker", "AWS", "Google Cloud"],
+    },
+  ];
 
-                <div className="flex items-center text-xs text-label-1 dark:text-dark-label-1 flex-wrap  ">
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            React
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            Astro
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="mt-4 flex flex-col space-y-4">
-                <div>
-                    <div class="flex items-center text-xs"><span class="mr-1.5 flex"><span class="inline-block h-1 w-1 rounded-full bg-green-400 dark:bg-dark-red-s"></span></span><span class="font-medium">Databases</span></div>
-                </div>
-
-                <div className="flex items-center text-xs text-label-1 dark:text-dark-label-1 flex-wrap ">
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            MySQL
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            MongoDB
-                        </div>
-                    </div>
-                    <div className="text-xs">
-                        <span color="text-label-2 dark:text-dark-label-2"></span>
-                        <div
-                            className="inline-flex bg-neutral-600  mr-3 items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3">
-                            Redis
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <div className="text-lg font-semibold leading-6">Skills</div>
+      {skillCategories.map((category, index) => (
+        <SkillCategory
+          key={index}
+          category={category}
+          skills={category.skills}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Skills;

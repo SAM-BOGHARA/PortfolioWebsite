@@ -3,7 +3,7 @@ import ProfileCard from "./ProfileCard";
 import Buttons from "./Buttons";
 import Links from "./Links";
 import Hr from "./Hr"
-import Skills from "./Skills"
+import Skills from "./Skills";
 
 function LeftSide() {
     return (
