@@ -2,14 +2,14 @@ import React from "react";
 
 function Accord(props) {
   return (
-    <div className="ml-1.5 mr-1.5 p-6 pl-3 mb-3 hover:shadow-2xl rounded-lg bg-stone-800 hover:bg-stone-700 text-white focus:bg-stone-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-800 active:shadow-lg transition duration-150 ease-in-out">
+    <div className="ml-1.5 mr-1.5 p-4 pl-3 mb-3 hover:shadow-2xl rounded-lg bg-stone-800 hover:bg-stone-700 text-white focus:bg-stone-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-800 active:shadow-lg transition duration-150 ease-in-out">
       <h2 className="font-semibold text-3xl mb-5">{props.title}</h2>
-      <article className="font-normal break-all text-base">
-        {props.description}
-      </article>
-      <article className=" font-bold break-all text-base">
+      <ul className="font-normal text-wrap">{props.description}</ul>
+      <ul
+        className=" font-bold  text-wrap"
+      >
         {props.techstack}
-      </article>
+      </ul>
       <div className="flex flex-rows space-x-5">
         {props.github && (
           <a

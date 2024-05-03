@@ -49,11 +49,11 @@ function RightSide() {
 
                 <div className="w-full rounded-lg bg-stone-800 mr-3 mb-4">
                     <div className="text-black-900 flex items-center">
-                        <h1 className="pt-3 pl-3 font-semibold text-lg pb-3">
+                        <h1 className="pt-3 pl-3 font-semibold text-lg">
                             Projects
                         </h1>
                     </div>
-                    <div className="flex justify-between p-0 text-label-1 dark:text-dark-label-1 break-all text-base font-semibold">
+                    <div className="flex justify-between p-0 text-label-1 dark:text-dark-label-1 font-semibold">
                         <div className="w-full">
                             {projects.map(createAccord)}
                         </div>

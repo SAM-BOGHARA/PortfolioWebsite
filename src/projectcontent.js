@@ -10,12 +10,12 @@ const projects = [
     {
         "title": "Leetcode Contest Enhancer Extension",
         "description": "Enhanced LeetCode website contest pages with a Chrome extension, providing language insights and improving user contest experience.",
-        "techstack": "Techstack : JavaScript,Chrome APIs,Django,Supabase PostgreSQL,Redis,Docker,DockerHub,Google Cloud Run"
+        "techstack": "Techstack : JavaScript, Chrome APIs, Django, Supabase PostgreSQL, Redis, Docker, DockerHub, Google Cloud Run"
     },
     {
         "title": "Netflix-TMDB Clone",
         "description": "Developed a Netflix-based clone website using React, Redux, Material UI, Alan AI, and TMDB API, offering users the ability to browse, search,view movie and cast details,add favorite and watchlist movies and as well as navigate the site using voice-based controls powered by Alan AI and deployed on Netlify",
-        "techstack": "Techstack : React,NodeJS,Alan AI SDK,Redux,Material-UI,Netlify.",
+        "techstack": "Techstack : React, NodeJS, Alan AI SDK, Redux, Material-UI, Netlify.",
         "github": "https://github.com/SAM-BOGHARA/netflix-imdb",
         "link": "https://shubham-filmpire.netlify.app"
     },
