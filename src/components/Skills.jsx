@@ -61,7 +61,7 @@ function Skills() {
       name: "Tools",
       color: "bg-pink-400 dark:bg-dark-red-s",
       bgColor: "bg-fill-3 dark:bg-dark-fill-3",
-      skills: ["Kafka", "Docker", "AWS", "Google Cloud"],
+      skills: ["Kafka", "Docker", "AWS", "Google Cloud Platform"],
     },
   ];
 
